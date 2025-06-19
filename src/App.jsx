@@ -33,7 +33,7 @@ const App = () => {
         </div>
 
         {/* Hero Section */}
-        <div className="relative z-10 h-full flex items-center justify-left pl-5">
+        <div className="relative z-5 h-full flex items-center justify-left pl-5">
           <HeroSection />
         </div>
       </div>
