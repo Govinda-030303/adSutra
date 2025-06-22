@@ -5,18 +5,49 @@ import { useForm } from "react-hook-form";
 import classNames from "classnames";
 
 const ContactForm = () => {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
   const [phone, setPhone] = useState("");
 
-  const onSubmit = (data) => {
-    console.log({ ...data, phone });
-    alert("Message sent successfully!");
-    reset();
-    setPhone("");
+  // const onSubmit = (data) => {
+  //   console.log({ ...data, phone });
+  //   alert("Message sent successfully!");
+  //   reset();
+  //   setPhone("");
+  // };
+  const onSubmit = async (data) => {
+    const formData = new FormData();
+    formData.append("name", data.name);
+    formData.append("email", data.email);
+    formData.append("phone", phone);
+    formData.append("message", data.message);
+  
+    try {
+      const response = await fetch("https://getform.io/f/bejlzmqa", {
+        method: "POST",
+        body: formData,
+      });
+  
+      if (response.ok) {
+        alert("Message sent successfully!");
+        reset();
+        setPhone("");
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again.");
+    }
   };
+  
 
   return (
-    <section className=" py-16 px-6 md:px-20 text-white">
+    <section className=" py-16 px-6 md:px-20 text-white" id="contact-form">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
           Get in Touch
@@ -75,7 +106,7 @@ const ContactForm = () => {
                 borderRadius: "0.5rem",
                 border: "none",
                 color: "#fff",
-                fontSize: "1rem"
+                fontSize: "1rem",
               }}
             />
           </div>

@@ -8,6 +8,12 @@ import {
 } from "react-icons/si";
 
 const Footer = () => {
+  const handleScroll = () => {
+    const target = document.getElementById("services");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <footer className="bg-[#140A1F] text-white py-16 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
@@ -18,26 +24,29 @@ const Footer = () => {
             <span>Sutra</span>
           </h1>
           <p className="mt-6 text-gray-300 leading-relaxed">
-            Ad Sutra is an award-winning top digital marketing agency providing branding,
-            UX/UI, and product design services in Dubai, New York, London,
-            Paris, and beyond.
+            Ad Sutra is an award-winning top digital marketing agency providing
+            branding, UX/UI, and product design services in Dubai, New York,
+            London, Paris, and beyond.
           </p>
         </div>
 
         {/* Navigation Links */}
         <div className="flex flex-col gap-4 text-gray-300 md:justify-center">
-          <a href="#" className="hover:text-white transition">
+          {/* <a href="#" className="hover:text-white transition">
             How it Works
-          </a>
+          </a> */}
           {/* <a href="#" className="hover:text-white transition">
             Recent Work
           </a>
           <a href="#" className="hover:text-white transition">
             What You Get
           </a> */}
-          <a href="#" className="hover:text-white transition">
+          <span
+            className="hover:text-white transition hover:cursor-pointer"
+            onClick={handleScroll}
+          >
             Services
-          </a>
+          </span>
         </div>
 
         {/* Contact and Social */}

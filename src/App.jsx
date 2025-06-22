@@ -42,7 +42,7 @@ const App = () => {
         {/* main section */}
         <AfterHeroCarousel />
         <TextSection />
-        <HowItWorks />
+        {/* <HowItWorks /> */}
         <WhyChooseUs />
         <SocialMediaIcons />
 

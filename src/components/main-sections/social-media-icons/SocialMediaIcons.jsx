@@ -142,6 +142,13 @@ const SocialMediaIcons = () => {
     }
   };
 
+  const getStarted = () => {
+    const target = document.getElementById("contact-form");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center p-8">
       <div className="max-w-6xl w-full">
@@ -197,7 +204,7 @@ const SocialMediaIcons = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
+          transition={{ delay: 0, duration: 1 }}
           className="mt-16 text-center"
         >
           <div className="inline-flex items-center space-x-4 bg-white rounded-full px-8 py-4 shadow-lg">
@@ -206,7 +213,7 @@ const SocialMediaIcons = () => {
               transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
               className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full"
             />
-            <span className="text-gray-600 font-medium">
+            <span className="text-gray-600 font-medium hover:cursor-pointer" onClick={getStarted}>
               Connect your brand to the world
             </span>
           </div>

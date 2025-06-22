@@ -4,6 +4,8 @@ import seoImg from "../../../assets/feature-image/seo.png";
 import aiImg from "../../../assets/feature-image/ai_driven.png";
 import reporting from "../../../assets/feature-image/reporting.png";
 import adManagement from "../../../assets/feature-image/adManagement.png";
+import webDevelopment from "../../../assets/feature-image/web_development.png";
+import appDevelopment from "../../../assets/feature-image/app_development.png";
 import FeatureCard from "./FeatureCard";
 
 const featureData = [
@@ -35,10 +37,25 @@ const featureData = [
     description:
       "Manage all your advertising campaigns in one centralized platform. Our unified ads management feature allows you to control, monitor, and adjust ads across multiple platforms with ease. Get a complete view of your campaigns, saving time and ensuring consistency in your messaging. Seamless integration with major ad platforms Real-time performance monitoring Multi-channel management from one dashboard",
   },
+  {
+    id: 5,
+    img: webDevelopment,
+    title: "Website Development",
+    description:
+      "Manage all your advertising campaigns in one centralized platform. Our unified ads management feature allows you to control, monitor, and adjust ads across multiple platforms with ease. Get a complete view of your campaigns, saving time and ensuring consistency in your messaging. Seamless integration with major ad platforms Real-time performance monitoring Multi-channel management from one dashboard",
+  },
+  {
+    id: 6,
+    img: appDevelopment,
+    title: "App Development",
+    description:
+      "Manage all your advertising campaigns in one centralized platform. Our unified ads management feature allows you to control, monitor, and adjust ads across multiple platforms with ease. Get a complete view of your campaigns, saving time and ensuring consistency in your messaging. Seamless integration with major ad platforms Real-time performance monitoring Multi-channel management from one dashboard",
+  },
+  
 ];
 const FeatureSection = () => {
   return (
-    <div className="">
+    <div className="" id="services">
       <div className="">
         <h1 className="text-center text-5xl text-white/90 font-mono font-bold">
           Our Best Features
