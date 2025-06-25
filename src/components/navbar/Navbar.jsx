@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from '../../assets/logo/rudrasutrixLogo1.png'
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -22,7 +23,8 @@ const Navbar = () => {
         {/* Logo */}
         <div className="text-2xl font-extrabold tracking-wide">
           <h1 className="text-4xl font-bold text-white">
-            Ad <span className="text-purple-400 animate-pulse">Sutra</span>
+            {/* Ad <span className="text-purple-400 animate-pulse">Sutra</span> */}
+            <img src={logo} alt="" className=" w-[3rem] scale-200 animate-pulse" />
           </h1>
         </div>
 

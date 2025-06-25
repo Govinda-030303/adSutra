@@ -38,7 +38,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className=" bg-[#0d031c] ">
+      <div className=" bg-[#0d031c]">
         {/* main section */}
         <AfterHeroCarousel />
         <TextSection />

@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../../assets/logo/rudrasutrixLogo1.png"; 
 import {
   SiLinkedin,
   SiInstagram,
@@ -20,8 +21,9 @@ const Footer = () => {
         {/* Logo and description */}
         <div>
           <h1 className="text-3xl font-bold flex items-center gap-2">
-            <span className="text-4xl font-black tracking-widest">Ad</span>
-            <span>Sutra</span>
+            {/* <span className="text-4xl font-black tracking-widest">Ad</span>
+            <span>Sutra</span> */}
+            <img src={logo} alt="" className="w-[5rem] scale-200 animate-pulse" />
           </h1>
           <p className="mt-6 text-gray-300 leading-relaxed">
             Ad Sutra is an award-winning top digital marketing agency providing
